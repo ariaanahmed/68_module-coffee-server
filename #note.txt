@@ -1,3 +1,21 @@
 68-1 Module overview and create basic server and client
 
 npm i express cors mongodb dotenv
+
+68-2 Client Side router and Connect MongoDB database
+
+eslint er error dur korar problemo
+...
+env: {
+   browser: true,
+   node: true,    <<<<--- Add this
+   es6: true
+ },
+...
+.eslintrc.cjs file e  env: { browser: true, es2020: true, node: true }, ei line ta add korlei kaj ses
+
+create a new user in database -> database access > add new database user > create user name and auto generate a password > add user
+
+express dotenv (google) > https://www.npmjs.com/package/dotenv > npm install dotenv --save > paste this is -> require('dotenv').config() -> index.js
+
+68-3 Server Side hide database User and Password using dotenv config
