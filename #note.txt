@@ -14,8 +14,47 @@ env: {
 ...
 .eslintrc.cjs file e  env: { browser: true, es2020: true, node: true }, ei line ta add korlei kaj ses
 
-create a new user in database -> database access > add new database user > create user name and auto generate a password > add user
+create a new user in database -> database access > add new database user > create user name and auto generate a password > Built-in Role > Read and write to any database > add user
 
 express dotenv (google) > https://www.npmjs.com/package/dotenv > npm install dotenv --save > paste this is -> require('dotenv').config() -> index.js
 
 68-3 Server Side hide database User and Password using dotenv config
+
+
+68-4 Create Add coffee from Client Side and get data
+
+68-5 Send Coffee data to the server and store in the mongodb database
+
+*. node mongodb crud(google) -> Usage Examples > Insert Operation > Insert a Document
+1.     app.post('/coffee', (req, res) => {
+      const newCoffee = req.body;
+      console.log(newCoffee)
+    })
+
+2. fetch('http://localhost:5000/coffee', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(newCoffee)
+        }).then((res) => res.json()).then((data) => {
+            console.log(data)
+        })
+3. const coffeeCollection = client.db("coffeeDB").collection('coffee');
+
+4. const result = await coffeeCollection.insertOne(newCoffee)
+
+5. res.send(result)
+
+
+how to create a sweet alert (https://sweetalert2.github.io/#download) > npm install sweetalert2 (client side e jabe eta) + import Swal from 'sweetalert2' (jei khanel alert dekhano lagbe sekha ei file ta import korlei hobe) > Swal.fire({
+  title: 'Error!',
+  text: 'Do you want to continue',
+  icon: 'error',
+  confirmButtonText: 'Cool'
+})
+
+
+68-6 View all coffee and create coffee card
+
+node mongodb crud - to see the option of CRUD 
