@@ -57,4 +57,26 @@ how to create a sweet alert (https://sweetalert2.github.io/#download) > npm inst
 
 68-6 View all coffee and create coffee card
 
-node mongodb crud - to see the option of CRUD 
+node mongodb crud - to see the option of CRUD
+
+68-7 Delete a coffee and fetch coffee for udpate
+
+A confirm dialog, with a function attached to the "Confirm"-button    ------>   Swal.fire({
+  title: 'Are you sure?',
+  text: "You won't be able to revert this!",
+  icon: 'warning',
+  showCancelButton: true,
+  confirmButtonColor: '#3085d6',
+  cancelButtonColor: '#d33',
+  confirmButtonText: 'Yes, delete it!'
+}).then((result) => {
+  if (result.isConfirmed) {
+    Swal.fire(
+      'Deleted!',
+      'Your file has been deleted.',
+      'success'
+    )
+  }
+})
+
+68-8 Update single coffee information
