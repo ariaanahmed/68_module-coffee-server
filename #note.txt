@@ -80,3 +80,6 @@ A confirm dialog, with a function attached to the "Confirm"-button    ------>   
 })
 
 68-8 Update single coffee information
+
+
+68-9 Module Summary and Rest API endpoints naming convention
